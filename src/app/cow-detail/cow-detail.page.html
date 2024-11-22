@@ -1,0 +1,127 @@
+<ion-content>
+  <div class="main_back_btn">
+
+  <ion-buttons>
+    <ion-button class="close_btn" (click)="BackBtn()">
+      <ion-icon name="chevron-back-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</div>
+
+<div class="cow_image image_preview">
+  <img id="image_preview"  src="../../assets/images/no-preview.jpeg" alt="Preview" *ngIf="imageSrc" [src]="imageSrc" />
+  <!-- Preview Image -->
+
+  <!-- Hidden File Input -->
+  <input type="file" id="add_image" style="display: none;" accept="image/*" (change)="onFileSelected($event)">
+
+  <!-- Label to trigger file input -->
+  <label for="add_image" style="cursor: pointer;">
+    <div class="change_cow_image">
+      <ion-icon name="camera-outline"></ion-icon>
+    </div>
+  </label>
+</div>
+
+<div class="titile_and_edit">
+  <div class="main_title green_text">
+    Basic Info
+  </div>
+  <div class="edit_btn green_text">
+    Edit
+  </div>
+
+</div>
+
+<div class="main_cow_detail">
+  <div class="cow_detail_row">
+    <div class="single_cow_detail">
+      <div class="main_cow_image">
+        <img src="../../assets/images/cow_face.png" alt="">
+      </div>
+      <div class="cow_detail">
+        <p class="cow_title">Cow ID</p>
+        <div class="detail cow_title">
+          123456
+        </div>
+      </div>
+    </div>
+    <div class="single_cow_detail">
+      <div class="main_cow_image">
+        <img src="../../assets/images/download-removebg-preview (1).png" alt="">
+      </div>
+      <div class="cow_detail">
+        <p class="cow_title">Gender</p>
+        <div class="detail cow_title">
+          Male
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cow_detail_row">
+    <div class="single_cow_detail">
+      <div class="main_cow_image">
+        <img src="../../assets/images/breed.png" alt="">
+      </div>
+      <div class="cow_detail">
+        <p class="cow_title">Breed</p>
+        <div class="detail cow_title">
+          Cholistani
+        </div>
+      </div>
+    </div>
+    <div class="single_cow_detail">
+      <div class="main_cow_image">
+        <img src="../../assets/images/download-removebg-preview.png" alt="">
+      </div>
+      <div class="cow_detail">
+        <p class="cow_title">Birthday</p>
+        <div class="detail cow_title">
+          12/10/2024
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="main_setting_options questionnaries_and_medical_rec">
+  
+
+<div class="single_setting_option" routerLink="/questionnaire">
+  <div class="setting_icon">
+    <ion-icon name="document-outline"></ion-icon>
+  </div>
+  <div class="main_option_anme_and_action">
+    <div class="setting_name" >
+      <p>Questionnaire</p>
+    </div>
+    <div class="action">
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+    </div>
+  </div>
+</div>
+<div class="single_setting_option" routerLink="/medical-records">
+  <div class="setting_icon">
+    <ion-icon name="medical-outline"></ion-icon>
+  </div>
+  <div class="main_option_anme_and_action">
+    <div class="setting_name">
+      <p>Medical Records</p>
+    </div>
+    <div class="action">
+      <ion-icon name="chevron-forward-outline"></ion-icon>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="main_move_out_btn">
+  <ion-button expand="block" class="login-btn" shape="round">
+    Move Out
+  </ion-button>
+</div>
+
+
+</ion-content>

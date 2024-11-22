@@ -1,0 +1,55 @@
+<div class="main_back_btn">
+
+  <ion-buttons>
+    <ion-button class="close_btn" (click)="BackBtn()">
+      <ion-icon name="chevron-back-outline"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</div>
+
+<ion-content >
+  <!-- <div class="main_title">
+    Select All That Applies
+  </div>
+  <div class="submain_title">
+    This will be adapted by the questionnaire
+  </div> -->
+
+  <!-- <div class="main_options">
+    <div class="single_option">
+      Bovine Tuberculosis
+    </div>
+    <div class="single_option">
+      Mastitis
+    </div>
+  </div> -->
+
+  <ion-grid class="main_content">
+    <ion-row class="first_row">
+      <ion-col size="12">
+        <h2>Select All That Applies</h2>
+        <p>This will be adapted by the questionnaire</p>
+      </ion-col>
+    </ion-row>
+
+    <!-- List of Radio Buttons for Disease Selection -->
+    <ion-list style="background: none;">
+      <ion-radio-group [(ngModel)]="selectedDisease">
+        <ion-item *ngFor="let disease of diseases" [class.selected]="selectedDisease === disease" lines="none" class="questions_list"> 
+          <label for="{{disease}}">{{disease}}</label>
+          <ion-radio slot="start" [value]="disease" style="display: none;" id="{{disease}}"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+
+    <!-- Next Button -->
+    <ion-row class="ion-text-right">
+      <ion-col>
+        <ion-button class="next_btn">
+          Next
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
